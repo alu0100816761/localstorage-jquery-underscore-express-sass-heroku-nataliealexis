@@ -9,9 +9,13 @@
     var r = [];
     var removeQuotes = function(field) {
       var removecomma = field.replace(/,\s*$/, '');
+      console.log(removecomma);
       var remove1stquote = removecomma.replace(/^\s*"/, '');
+      console.log(remove1stquote);
       var removelastquote = remove1stquote.replace(/"\s*$/, '');
+      console.log(removelastquote);
       var removeescapedquotes = removelastquote.replace(/\\"/, '"');
+      console.log(removeescapedquotes);
       return removeescapedquotes;
     };
 
