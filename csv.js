@@ -22,7 +22,7 @@
       var error = false;
 
       // skip empty lines and comments
-      if (temp.match(/(^\s*$)|(^#.*)/)) continue; 
+      if (temp.match(/(^\s*$)|(^#.*)/)) continue;
       if (m) {
         result = m.map(removeQuotes);
         error = (commonLength != m.length);
@@ -37,4 +37,3 @@
     return r;
   };
 })(this);
-
