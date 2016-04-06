@@ -9,9 +9,13 @@
     var r = [];
     var removeQuotes = function(field) {
       var removecomma = field.replace(/,\s*$/, '');
+      console.log(removecomma);
       var remove1stquote = removecomma.replace(/^\s*"/, '');
+      console.log(remove1stquote);
       var removelastquote = remove1stquote.replace(/"\s*$/, '');
+      console.log(removelastquote);
       var removeescapedquotes = removelastquote.replace(/\\"/, '"');
+      console.log(removeescapedquotes);
       return removeescapedquotes;
     };
 
@@ -22,7 +26,7 @@
       var error = false;
 
       // skip empty lines and comments
-      if (temp.match(/(^\s*$)|(^#.*)/)) continue; 
+      if (temp.match(/(^\s*$)|(^#.*)/)) continue;
       if (m) {
         result = m.map(removeQuotes);
         error = (commonLength != m.length);
@@ -37,4 +41,3 @@
     return r;
   };
 })(this);
-
