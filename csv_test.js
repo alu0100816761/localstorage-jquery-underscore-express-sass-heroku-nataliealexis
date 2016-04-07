@@ -19,5 +19,20 @@ describe("CSV", function () {
       var r = calculate(cadena);
       expect(r[0].value[0]).to.equal('hola');
     });
+    it("prueba con una coma a la derecha", function() {
+      var cadena = '"hola,"';
+      var r = calculate(cadena);
+      expect(r[0].value[0]).to.equal('hola,');
+    });
+    it("prueba con una coma a la izquierda", function() {
+      var cadena = '",hola"';
+      var r = calculate(cadena);
+      expect(r[0].value[0]).to.equal(',hola');
+    });
+    it("prueba con espacios", function() {
+      var cadena = '" hola"';
+      var r = calculate(cadena);
+      expect(r[0].value[0]).to.equal(' hola');
+    });
   });
 });
