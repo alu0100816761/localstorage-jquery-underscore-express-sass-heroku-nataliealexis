@@ -36,6 +36,7 @@
       else {
         var errmsg = 'La fila "' + temp + '" no es un valor de CSV permitido.';
         r.push({value: errmsg.split("").splice(commonLength), rowClass: 'error'});
+        console.log("falla");
       }
     }
     return r;
