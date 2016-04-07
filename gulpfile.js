@@ -3,9 +3,25 @@ var minify = require('gulp-minify');
 var cleanCSS = require('gulp-clean-css');
 var htmlmin = require('gulp-htmlmin');
 var clean = require('gulp-clean');
+var karma   = require('gulp-karma');
 
 gulp.task('default', ['minify-js', 'minify-css', 'minify-html'], function() {
+  gulp.src([])
+    .pipe(karma({
+      configFile: 'karma.conf.js',
+      action: 'watch'
+    }));
+});
 
+gulp.task('test', function() {
+  return gulp.src([])
+    .pipe(karma({
+      configFile: 'karma.conf.js',
+      action: 'run'
+    }))
+    .on('error', function(err) {
+      throw err;
+    });
 });
 
 gulp.task('minify-js', function() {
