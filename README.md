@@ -1,7 +1,6 @@
 #ETSII ULL Grado de Informatica
-#Práctica:
 
-#Comma Separated Values
+#Practica: Comma Separated Values
 
 ##Heroku
 * [Despliegue de la aplicacion en HEROKU](https://cvs-alexisnatalie.herokuapp.com/)
